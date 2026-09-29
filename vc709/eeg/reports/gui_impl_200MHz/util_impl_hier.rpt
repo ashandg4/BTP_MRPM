@@ -1,0 +1,38 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2026.1 (win64) Build 6511674 Tue Jun 16 11:02:23 MDT 2026
+| Date         : Tue Sep 29 13:34:24 2026
+| Host         : LAPTOP-26AT71B1 running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file {C:/Users/Aditya Garg/OneDrive/Documents/btp_repo_claude_code/repo/vc709/eeg/reports/gui_impl_200MHz/util_impl_hier.rpt}
+| Design       : eeg_hil_top
+| Device       : xc7vx690tffg1761-2
+| Speed File   : -2
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-----------------+-------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|     Instance    |          Module         | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++-----------------+-------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| eeg_hil_top     |                   (top) |       2696 |       2696 |       0 |    0 | 2512 |    544 |      0 |          0 |
+|   (eeg_hil_top) |                   (top) |       1017 |       1017 |       0 |    0 | 2041 |    544 |      0 |          0 |
+|   u_dut0        |          fir8_symmetric |        730 |        730 |       0 |    0 |   79 |      0 |      0 |          0 |
+|   u_dut1        |               fir8_fold |        377 |        377 |       0 |    0 |   78 |      0 |      0 |          0 |
+|   u_dut2        |     fir8_fold_pipelined |        303 |        303 |       0 |    0 |  243 |      0 |      0 |          0 |
+|     (u_dut2)    |     fir8_fold_pipelined |         76 |         76 |       0 |    0 |  160 |      0 |      0 |          0 |
+|     M1          |   mrpm_radix4_wide_pipe |         61 |         61 |       0 |    0 |   25 |      0 |      0 |          0 |
+|     M3          | mrpm_radix4_wide_pipe_1 |        147 |        147 |       0 |    0 |   49 |      0 |      0 |          0 |
+|   u_rx          |                 uart_rx |        219 |        219 |       0 |    0 |   40 |      0 |      0 |          0 |
+|   u_tx          |                 uart_tx |         52 |         52 |       0 |    0 |   31 |      0 |      0 |          0 |
++-----------------+-------------------------+------------+------------+---------+------+------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

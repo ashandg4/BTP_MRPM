@@ -1,0 +1,7 @@
+record,snr_in_nominal,gap,rep,dut,samples,mismatches,checksum_ok,snr_in,snr_out,snri,mse,cor,fidelity_snr
+clean,,0,0,A_direct,140015,0,True,inf,35.921046,-inf,0.003378,0.999994,35.930179
+clean,,0,0,B_fold,140015,0,True,inf,35.921046,-inf,0.003378,0.999994,35.930179
+clean,,0,0,C_pipe,140015,0,True,inf,35.921046,-inf,0.003378,0.999994,35.930179
+awgn_+10dB,10,0,0,A_direct,140015,0,True,10.002172,15.746455,5.744283,0.351623,0.987452,35.840059
+awgn_+10dB,10,0,0,B_fold,140015,0,True,10.002172,15.746455,5.744283,0.351623,0.987452,35.840059
+awgn_+10dB,10,0,0,C_pipe,140015,0,True,10.002172,15.746455,5.744283,0.351623,0.987452,35.840059

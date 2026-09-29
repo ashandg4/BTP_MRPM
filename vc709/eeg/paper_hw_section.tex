@@ -1,0 +1,47 @@
+% ===================================================================
+% Draft subsection for the paper: hardware validation on the VC709.
+% Every \HW{...} is a placeholder. Replace it ONLY with a value from
+% results/<timestamp>/ (run.log, CSVs) or reports/clk200/ (Vivado).
+% Then \input the generated results/<timestamp>/tables.tex.
+% ===================================================================
+\providecommand{\HW}[1]{\textcolor{red}{[#1]}}
+
+\subsection{Hardware Validation on a Virtex-7 FPGA with EEG Data}
+\label{sec:hw}
+
+The three architectures (A: direct form, B: symmetric-folded, C: folded and
+pipelined) were implemented together on a Xilinx VC709 board
+(XC7VX690T-2FFG1761) at \HW{200}~MHz, with the RTL unchanged from the
+simulation study. A hardware-in-the-loop harness streams an EEG record from
+on-chip block RAM through all three filters in parallel, one sample per clock,
+stores every output in block RAM, and returns it to the host over USB-UART.
+On-chip counters record the output count, the first-output latency and the
+total clock count of each filter. The routed design meets timing with a
+worst negative slack of \HW{WNS}~ns and uses no DSP48 slices
+(\HW{dsp\_total}~=~0).
+
+The input is the seven-epoch synthetic EEG of Agarwal et
+al.~\cite{agarwal2017} (140{,}007 samples), clean and with white Gaussian
+noise at input SNRs from 30 to $-5$~dB. Each record is peak-normalised to
+$[-1,1]$ and quantised to 8-bit two's complement, as in the normalisation
+step of AutoFIR~\cite{liu2026autofir}. Table~\ref{tab:hw_eeg} lists the
+signal metrics computed from the hardware output. For every record, every
+output of all three filters matched the bit-exact software model
+(\HW{0} mismatches in \HW{7,560,810} compared outputs, two input rates). The
+measured SNR improvement saturates at \HW{5.8}~dB, in agreement with the
+analytic white-noise gain of the quantised taps,
+$10\log_{10}\!\bigl[(\sum h)^2/\sum h^2\bigr] = 5.90$~dB. The fidelity with
+respect to the floating-point filter is limited to about \HW{36}~dB by
+coefficient rounding ($\sum h_q = 130$ instead of 128), not by the MRPM
+datapath, which is exact.
+
+Table~\ref{tab:hw_timing} gives the measured timing. With one sample per
+clock the filters process the full record in \HW{140,016}/\HW{140,020}
+clocks (\HW{700}~$\mu$s at 200~MHz), i.e.\ a sustained throughput of one
+output per clock. The measured input-to-output latency is \HW{2} clocks for
+A and B and \HW{5} clocks for C; the difference of three clocks equals the
+pipeline registers added in C. The die temperature during the runs, read
+from the on-chip XADC, was \HW{T}~\textdegree C at
+VCCINT~=~\HW{V}~V.
+
+% \input{results/<timestamp>/tables.tex}

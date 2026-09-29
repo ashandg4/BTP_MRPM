@@ -1,0 +1,100 @@
+# VC709 EEG HIL run 20260929_150834
+board: HIL1 clk=150.000 MHz AW=18 NDUT=3  port=COM8 baud=921600
+host : Windows-11-10.0.26200-SP0 python 3.14.2 numpy 2.5.1
+data : C:\Users\Aditya Garg\OneDrive\Documents\btp_repo_claude_code\repo\vc709\eeg\synth.mat  noise seed 2017  gaps [0, 7]  repeat 1
+taps : [0, 3, 20, 42, 42, 20, 3, 0] / 128; analytic white-noise SNRI = 5.90 dB
+record: 140007 samples, peak 10.100
+
+== clean: 140007 samples + 8 flush, scale 12.5743 LSB/unit, upload 2.0s checksum ok
+  gap 0 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin inf SNRout 35.92 SNRI -inf COR 0.99999 MSE 0.00338 fid 35.93 dB
+  gap 0 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin inf SNRout 35.92 SNRI -inf COR 0.99999 MSE 0.00338 fid 35.93 dB
+  gap 0 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 140020 lat 5+0 | SNRin inf SNRout 35.92 SNRI -inf COR 0.99999 MSE 0.00338 fid 35.93 dB
+  gap 0 rep 0: A/B/C identical to each other and to first run: True
+  gap 7 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin inf SNRout 35.92 SNRI -inf COR 0.99999 MSE 0.00338 fid 35.93 dB
+  gap 7 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin inf SNRout 35.92 SNRI -inf COR 0.99999 MSE 0.00338 fid 35.93 dB
+  gap 7 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 1120118 lat 5+0 | SNRin inf SNRout 35.92 SNRI -inf COR 0.99999 MSE 0.00338 fid 35.93 dB
+  gap 7 rep 0: A/B/C identical to each other and to first run: True
+
+== awgn_+30dB: 140007 samples + 8 flush, scale 12.2080 LSB/unit, upload 2.0s checksum ok
+  gap 0 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 30.00 SNRout 32.85 SNRI 2.84 COR 0.99987 MSE 0.00686 fid 35.93 dB
+  gap 0 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 30.00 SNRout 32.85 SNRI 2.84 COR 0.99987 MSE 0.00686 fid 35.93 dB
+  gap 0 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 140020 lat 5+0 | SNRin 30.00 SNRout 32.85 SNRI 2.84 COR 0.99987 MSE 0.00686 fid 35.93 dB
+  gap 0 rep 0: A/B/C identical to each other and to first run: True
+  gap 7 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin 30.00 SNRout 32.85 SNRI 2.84 COR 0.99987 MSE 0.00686 fid 35.93 dB
+  gap 7 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin 30.00 SNRout 32.85 SNRI 2.84 COR 0.99987 MSE 0.00686 fid 35.93 dB
+  gap 7 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 1120118 lat 5+0 | SNRin 30.00 SNRout 32.85 SNRI 2.84 COR 0.99987 MSE 0.00686 fid 35.93 dB
+  gap 7 rep 0: A/B/C identical to each other and to first run: True
+
+== awgn_+25dB: 140007 samples + 8 flush, scale 11.9824 LSB/unit, upload 2.0s checksum ok
+  gap 0 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 24.98 SNRout 29.57 SNRI 4.59 COR 0.99959 MSE 0.01456 fid 35.91 dB
+  gap 0 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 24.98 SNRout 29.57 SNRI 4.59 COR 0.99959 MSE 0.01456 fid 35.91 dB
+  gap 0 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 140020 lat 5+0 | SNRin 24.98 SNRout 29.57 SNRI 4.59 COR 0.99959 MSE 0.01456 fid 35.91 dB
+  gap 0 rep 0: A/B/C identical to each other and to first run: True
+  gap 7 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin 24.98 SNRout 29.57 SNRI 4.59 COR 0.99959 MSE 0.01456 fid 35.91 dB
+  gap 7 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin 24.98 SNRout 29.57 SNRI 4.59 COR 0.99959 MSE 0.01456 fid 35.91 dB
+  gap 7 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 1120118 lat 5+0 | SNRin 24.98 SNRout 29.57 SNRI 4.59 COR 0.99959 MSE 0.01456 fid 35.91 dB
+  gap 7 rep 0: A/B/C identical to each other and to first run: True
+
+== awgn_+20dB: 140007 samples + 8 flush, scale 11.4895 LSB/unit, upload 2.0s checksum ok
+  gap 0 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 19.99 SNRout 25.38 SNRI 5.39 COR 0.99871 MSE 0.03828 fid 35.89 dB
+  gap 0 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 19.99 SNRout 25.38 SNRI 5.39 COR 0.99871 MSE 0.03828 fid 35.89 dB
+  gap 0 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 140020 lat 5+0 | SNRin 19.99 SNRout 25.38 SNRI 5.39 COR 0.99871 MSE 0.03828 fid 35.89 dB
+  gap 0 rep 0: A/B/C identical to each other and to first run: True
+  gap 7 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin 19.99 SNRout 25.38 SNRI 5.39 COR 0.99871 MSE 0.03828 fid 35.89 dB
+  gap 7 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin 19.99 SNRout 25.38 SNRI 5.39 COR 0.99871 MSE 0.03828 fid 35.89 dB
+  gap 7 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 1120118 lat 5+0 | SNRin 19.99 SNRout 25.38 SNRI 5.39 COR 0.99871 MSE 0.03828 fid 35.89 dB
+  gap 7 rep 0: A/B/C identical to each other and to first run: True
+
+== awgn_+15dB: 140007 samples + 8 flush, scale 10.8651 LSB/unit, upload 2.0s checksum ok
+  gap 0 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 14.99 SNRout 20.61 SNRI 5.62 COR 0.99593 MSE 0.11464 fid 35.89 dB
+  gap 0 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 14.99 SNRout 20.61 SNRI 5.62 COR 0.99593 MSE 0.11464 fid 35.89 dB
+  gap 0 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 140020 lat 5+0 | SNRin 14.99 SNRout 20.61 SNRI 5.62 COR 0.99593 MSE 0.11464 fid 35.89 dB
+  gap 0 rep 0: A/B/C identical to each other and to first run: True
+  gap 7 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin 14.99 SNRout 20.61 SNRI 5.62 COR 0.99593 MSE 0.11464 fid 35.89 dB
+  gap 7 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin 14.99 SNRout 20.61 SNRI 5.62 COR 0.99593 MSE 0.11464 fid 35.89 dB
+  gap 7 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 1120118 lat 5+0 | SNRin 14.99 SNRout 20.61 SNRI 5.62 COR 0.99593 MSE 0.11464 fid 35.89 dB
+  gap 7 rep 0: A/B/C identical to each other and to first run: True
+
+== awgn_+10dB: 140007 samples + 8 flush, scale 9.0487 LSB/unit, upload 2.0s checksum ok
+  gap 0 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 10.02 SNRout 15.71 SNRI 5.69 COR 0.98737 MSE 0.35484 fid 35.81 dB
+  gap 0 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 10.02 SNRout 15.71 SNRI 5.69 COR 0.98737 MSE 0.35484 fid 35.81 dB
+  gap 0 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 140020 lat 5+0 | SNRin 10.02 SNRout 15.71 SNRI 5.69 COR 0.98737 MSE 0.35484 fid 35.81 dB
+  gap 0 rep 0: A/B/C identical to each other and to first run: True
+  gap 7 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin 10.02 SNRout 15.71 SNRI 5.69 COR 0.98737 MSE 0.35484 fid 35.81 dB
+  gap 7 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin 10.02 SNRout 15.71 SNRI 5.69 COR 0.98737 MSE 0.35484 fid 35.81 dB
+  gap 7 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 1120118 lat 5+0 | SNRin 10.02 SNRout 15.71 SNRI 5.69 COR 0.98737 MSE 0.35484 fid 35.81 dB
+  gap 7 rep 0: A/B/C identical to each other and to first run: True
+
+== awgn_+5dB: 140007 samples + 8 flush, scale 7.1903 LSB/unit, upload 2.0s checksum ok
+  gap 0 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 4.99 SNRout 10.74 SNRI 5.76 COR 0.96153 MSE 1.11249 fid 35.68 dB
+  gap 0 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 4.99 SNRout 10.74 SNRI 5.76 COR 0.96153 MSE 1.11249 fid 35.68 dB
+  gap 0 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 140020 lat 5+0 | SNRin 4.99 SNRout 10.74 SNRI 5.76 COR 0.96153 MSE 1.11249 fid 35.68 dB
+  gap 0 rep 0: A/B/C identical to each other and to first run: True
+  gap 7 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin 4.99 SNRout 10.74 SNRI 5.76 COR 0.96153 MSE 1.11249 fid 35.68 dB
+  gap 7 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin 4.99 SNRout 10.74 SNRI 5.76 COR 0.96153 MSE 1.11249 fid 35.68 dB
+  gap 7 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 1120118 lat 5+0 | SNRin 4.99 SNRout 10.74 SNRI 5.76 COR 0.96153 MSE 1.11249 fid 35.68 dB
+  gap 7 rep 0: A/B/C identical to each other and to first run: True
+
+== awgn_+1dB: 140007 samples + 8 flush, scale 5.1513 LSB/unit, upload 2.0s checksum ok
+  gap 0 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 0.99 SNRout 6.70 SNRI 5.71 COR 0.91034 MSE 2.82624 fid 35.42 dB
+  gap 0 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 0.99 SNRout 6.70 SNRI 5.71 COR 0.91034 MSE 2.82624 fid 35.42 dB
+  gap 0 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 140020 lat 5+0 | SNRin 0.99 SNRout 6.70 SNRI 5.71 COR 0.91034 MSE 2.82624 fid 35.42 dB
+  gap 0 rep 0: A/B/C identical to each other and to first run: True
+  gap 7 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin 0.99 SNRout 6.70 SNRI 5.71 COR 0.91034 MSE 2.82624 fid 35.42 dB
+  gap 7 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin 0.99 SNRout 6.70 SNRI 5.71 COR 0.91034 MSE 2.82624 fid 35.42 dB
+  gap 7 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 1120118 lat 5+0 | SNRin 0.99 SNRout 6.70 SNRI 5.71 COR 0.91034 MSE 2.82624 fid 35.42 dB
+  gap 7 rep 0: A/B/C identical to each other and to first run: True
+
+== awgn_-5dB: 140007 samples + 8 flush, scale 3.5552 LSB/unit, upload 2.0s checksum ok
+  gap 0 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin -5.01 SNRout 0.76 SNRI 5.78 COR 0.74026 MSE 11.07756 fid 35.29 dB
+  gap 0 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin -5.01 SNRout 0.76 SNRI 5.78 COR 0.74026 MSE 11.07756 fid 35.29 dB
+  gap 0 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 140020 lat 5+0 | SNRin -5.01 SNRout 0.76 SNRI 5.78 COR 0.74026 MSE 11.07756 fid 35.29 dB
+  gap 0 rep 0: A/B/C identical to each other and to first run: True
+  gap 7 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin -5.01 SNRout 0.76 SNRI 5.78 COR 0.74026 MSE 11.07756 fid 35.29 dB
+  gap 7 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 1120114 lat 1+1 | SNRin -5.01 SNRout 0.76 SNRI 5.78 COR 0.74026 MSE 11.07756 fid 35.29 dB
+  gap 7 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 1120118 lat 5+0 | SNRin -5.01 SNRout 0.76 SNRI 5.78 COR 0.74026 MSE 11.07756 fid 35.29 dB
+  gap 7 rep 0: A/B/C identical to each other and to first run: True
+
+TOTAL: 7560810 hardware output samples compared, 0 mismatches, 0 problems, 0 UART retries
+HARDWARE BIT-EXACT
+results in C:\Users\Aditya Garg\OneDrive\Documents\btp_repo_claude_code\repo\vc709\eeg\results\150MHz

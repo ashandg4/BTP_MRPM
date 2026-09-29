@@ -1,0 +1,22 @@
+# VC709 EEG HIL run 20260929_143532
+board: HIL1 clk=200.000 MHz AW=18 NDUT=3  port=COM8 baud=115200
+host : Windows-11-10.0.26200-SP0 python 3.14.2 numpy 2.5.1
+data : C:\Users\Aditya Garg\OneDrive\Documents\btp_repo_claude_code\repo\vc709\eeg\synth.mat  noise seed 2017  gaps [0]  repeat 1
+taps : [0, 3, 20, 42, 42, 20, 3, 0] / 128; analytic white-noise SNRI = 5.90 dB
+record: 140007 samples, peak 10.100
+
+== clean: 140007 samples + 8 flush, scale 12.5743 LSB/unit, upload 12.2s checksum ok
+  gap 0 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin inf SNRout 35.92 SNRI -inf COR 0.99999 MSE 0.00338 fid 35.93 dB
+  gap 0 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin inf SNRout 35.92 SNRI -inf COR 0.99999 MSE 0.00338 fid 35.93 dB
+  gap 0 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 140020 lat 5+0 | SNRin inf SNRout 35.92 SNRI -inf COR 0.99999 MSE 0.00338 fid 35.93 dB
+  gap 0 rep 0: A/B/C identical to each other and to first run: True
+
+== awgn_+10dB: 140007 samples + 8 flush, scale 9.6554 LSB/unit, upload 12.2s checksum ok
+  gap 0 rep 0 A_direct cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 10.00 SNRout 15.75 SNRI 5.74 COR 0.98745 MSE 0.35162 fid 35.84 dB
+  gap 0 rep 0 B_fold   cnt 140015 mism 0 sum ok clocks 140016 lat 1+1 | SNRin 10.00 SNRout 15.75 SNRI 5.74 COR 0.98745 MSE 0.35162 fid 35.84 dB
+  gap 0 rep 0 C_pipe   cnt 140015 mism 0 sum ok clocks 140020 lat 5+0 | SNRin 10.00 SNRout 15.75 SNRI 5.74 COR 0.98745 MSE 0.35162 fid 35.84 dB
+  gap 0 rep 0: A/B/C identical to each other and to first run: True
+
+TOTAL: 840090 hardware output samples compared, 0 mismatches, 0 problems, 0 UART retries
+HARDWARE BIT-EXACT
+results in C:\Users\Aditya Garg\OneDrive\Documents\btp_repo_claude_code\repo\vc709\eeg\results\DRYRUN_old200MHz_NOT_FOR_PAPER
